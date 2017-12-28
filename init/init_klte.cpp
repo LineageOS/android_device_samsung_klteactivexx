@@ -66,5 +66,5 @@ void init_target_properties()
 
     std::string device = GetProperty("ro.product.device", "");
     LOG(ERROR) << "Found bootloader id " << bootloader <<  " setting build properties for "
-        << device <<  " device" << std::endl;
+            << device <<  " device" << std::endl;
 }
