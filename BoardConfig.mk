@@ -25,6 +25,9 @@ TARGET_KERNEL_CONFIG := lineage_klteactivexx_defconfig
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
 TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klteactivexx/init/init_klte.cpp
 
+# NFC
+include $(COMMON_PATH)/nfc/pn547/board.mk
+
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 

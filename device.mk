@@ -24,17 +24,7 @@ $(call inherit-product-if-exists, vendor/samsung/klteactivexx/klteactivexx-vendo
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # NFC
-# See https://github.com/LineageOS/android_external_libnfc-nci/blob/cm-14.1/halimpl/pn54x/Android.mk#L21
-# for magic values of NXP_CHIP_TYPE.
-NXP_CHIP_TYPE := 1
-PRODUCT_PACKAGES += \
-    libpn547_fw \
-    nfc_nci.pn54x.default
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+$(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
