@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2013, The Linux Foundation. All rights reserved.
+   Copyright (c) 2018, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -57,10 +58,10 @@ void init_target_properties()
 
     if (bootloader.find("G870F") == 0) {
         /* klteactivexx */
-        property_override("ro.build.fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
         property_override("ro.build.description", "klteactivexx-user 5.0 LRX21T G870FXXU1BQE1 release-keys");
-        property_override("ro.product.model", "SM-G870F");
-        property_override("ro.product.device", "klteactivexx");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G870F");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "klteactivexx");
         gsm_properties();
     }
 
