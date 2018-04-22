@@ -1,7 +1,2 @@
-# NFC
-etc/sec_s3fwrn5_rfreg.bin
-lib/hw/nfc_nci.MSM8974.so
-vendor/firmware/sec_s3fwrn5_firmware.bin
-
-# Radio - pinned to G860PVPU2BOK1_G860PSPT2BOK1_SPR
-lib/libsec-ril.so:vendor/lib/libsec-ril.so|b62731e396e531deed0c9c36287f52fff8e79536
+# Radio - pinned to G870FXXU1BQE1_G870FOXX1BQE1_XEO
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|6686590c3cf1a5caa1c9976f5c6bbcdffe588656

@@ -37,19 +37,10 @@
 
 #include "init_msm8974.h"
 
-void cdma_properties(char const *operator_alpha,
-        char const *operator_numeric,
-        char const *default_network)
+void gsm_properties()
 {
-    /* Dynamic CDMA Properties */
-    property_set("ro.cdma.home.operator.alpha", operator_alpha);
-    property_set("ro.cdma.home.operator.numeric", operator_numeric);
-    property_set("ro.telephony.default_network", default_network);
-
-    /* Static CDMA Properties */
-    property_set("ril.subscription.types", "NV,RUIM");
-    property_set("ro.telephony.default_cdma_sub", "1");
-    property_set("telephony.lteOnCdmaDevice", "1");
+    property_set("ro.telephony.default_network", "9");
+    property_set("telephony.lteOnGsmDevice", "1");
 }
 
 void init_target_properties()
@@ -60,16 +51,14 @@ void init_target_properties()
 
     std::string bootloader = property_get("ro.bootloader");
 
-    if (bootloader.find("G860P") == 0) {
-        /* kltesprsports */
-        property_override("ro.build.fingerprint", "samsung/kltesprsports/kltesprsports:6.0.1/MMB29M/G860PVPU2CQB2:user/release-keys");
-        property_override("ro.build.description", "kltesprsports-user 6.0.1 MMB29M G860PVPU2CQB2 release-keys");
-        property_override("ro.product.model", "SM-G860P");
-        property_override("ro.product.device", "kltesprsports");
-        property_set("telephony.sms.pseudo_multipart", "1");
-        cdma_properties("Sprint", "310120", "8");
+    if (bootloader.find("G870F") == 0) {
+        /* klteactivexx */
+        property_override("ro.build.fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
+        property_override("ro.build.description", "klteactivexx-user 5.0 LRX21T G870FXXU1BQE1 release-keys");
+        property_override("ro.product.model", "SM-G870F");
+        property_override("ro.product.device", "klteactivexx");
+        gsm_properties();
     }
-    /* TODO: Add Sprint MVNOs */
 
     std::string device = property_get("ro.product.device");
     INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());

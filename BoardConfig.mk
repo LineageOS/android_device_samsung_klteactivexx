@@ -1,5 +1,5 @@
 # Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,19 +16,19 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltesprsports,klte
+TARGET_OTA_ASSERT_DEVICE := klteactivexx,klte
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_kltesprsports_defconfig
+TARGET_KERNEL_CONFIG := lineage_klteactivexx_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltesprsports/init/init_klte.cpp
+TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klteactivexx/init/init_klte.cpp
 
 # TWRP Support - Optional
 ifeq ($(WITH_TWRP),true)
--include device/samsung/kltesprsports/twrp.mk
+-include device/samsung/klteactivexx/twrp.mk
 endif
 
 # inherit from the proprietary version
--include vendor/samsung/kltesprsports/BoardConfigVendor.mk
+-include vendor/samsung/klteactivexx/BoardConfigVendor.mk
