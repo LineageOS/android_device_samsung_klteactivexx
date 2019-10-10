@@ -41,10 +41,11 @@ void vendor_load_properties()
 
     if (bootloader.find("G870F") == 0) {
         /* klteactivexx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
         property_override("ro.build.description", "klteactivexx-user 5.0 LRX21T G870FXXU1BQE1 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G870F");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "klteactivexx");
+        set_ro_product_prop("device", "klteactivexx");
+        set_ro_product_prop("fingerprint", "samsung/klteactivexx/klteactive:5.0/LRX21T/G870FXXU1BQE1:user/release-keys");
+        set_ro_product_prop("model", "SM-G870F");
+        set_ro_product_prop("name", "klteactivexx");
     }
 
     std::string device = GetProperty("ro.product.device", "");
