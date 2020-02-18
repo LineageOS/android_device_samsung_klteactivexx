@@ -1,5 +1,5 @@
 # Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klteactivexx/init/init_klt
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
+
+# Properties
+TARGET_SYSTEM_PROP += device/samsung/klteactivexx/system.prop
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
