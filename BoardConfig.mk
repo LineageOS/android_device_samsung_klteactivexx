@@ -22,8 +22,7 @@ TARGET_OTA_ASSERT_DEVICE := klteactivexx,klte
 TARGET_KERNEL_CONFIG := lineage_klteactivexx_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klteactivexx/init/init_klte.cpp
+TARGET_INIT_VENDOR_LIB := libinit_klteactivexx
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
