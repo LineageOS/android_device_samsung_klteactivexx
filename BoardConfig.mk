@@ -33,5 +33,8 @@ TARGET_SYSTEM_PROP += device/samsung/klteactivexx/system.prop
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klteactivexx/releasetools
+
 # inherit from the proprietary version
 include vendor/samsung/klteactivexx/BoardConfigVendor.mk
