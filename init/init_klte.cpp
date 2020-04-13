@@ -49,6 +49,12 @@ void vendor_load_properties()
         property_override("ro.build.description", "klteactivexx-user 5.0 LRX21T G870FXXU1BQE1 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G870F");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "klteactivexx");
+    } else if (bootloader.find("G870A") == 0) {
+        /* klteattactive */
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteattactive/klteattactive:4.4.2/KOT49H/G870AUCU0AND7:user/release-keys");
+        property_override("ro.build.description", "klteattactive-user 4.4.2 KOT49H G870AUCU0AND7 release-keys");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G870A");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "klteattactive");
     }
 
     std::string device = GetProperty("ro.product.device", "");
