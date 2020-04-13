@@ -26,5 +26,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # NFC
 $(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
 
+PRODUCT_PACKAGES += \
+   dtc_bootloaders \
+   dtc.sh \
+   hack.bin
+
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
