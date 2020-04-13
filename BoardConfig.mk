@@ -33,6 +33,9 @@ TARGET_SYSTEM_PROP += device/samsung/klteactivexx/system.prop
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klteactivexx/releasetools
+
 # TWRP Support - Optional
 ifeq ($(WITH_TWRP),true)
 -include device/samsung/klteactivexx/twrp.mk
