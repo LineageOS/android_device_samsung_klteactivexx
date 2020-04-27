@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/samsung/klteactivexx/klteactivexx-vendo
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # NFC
 $(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
