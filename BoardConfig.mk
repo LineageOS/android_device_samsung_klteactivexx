@@ -33,10 +33,5 @@ TARGET_SYSTEM_PROP += device/samsung/klteactivexx/system.prop
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
-# TWRP Support - Optional
-ifeq ($(WITH_TWRP),true)
--include device/samsung/klteactivexx/twrp.mk
-endif
-
 # inherit from the proprietary version
 -include vendor/samsung/klteactivexx/BoardConfigVendor.mk
