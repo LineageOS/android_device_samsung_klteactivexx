@@ -24,3 +24,13 @@ export VARIANT_COPYRIGHT_YEAR=2018
 export VENDOR=samsung
 
 ./../$DEVICE_COMMON/extract-files.sh $@
+
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+CM_ROOT="$MY_DIR"/../../..
+DEVICE_BLOB_ROOT="$CM_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+for f in "$DEVICE_BLOB_ROOT"/vendor/lib/libsec-ril.*; do
+  patchelf --replace-needed libcutils.so libcutils-v29.so "$f"
+done

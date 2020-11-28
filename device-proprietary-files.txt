@@ -23,5 +23,5 @@ bin/rfs_access:vendor/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
 bin/rmt_storage:vendor/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
 vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
 
-# Radio - pinned to G870FXXU1BQE1_G870FOXX1BQE1_XEO
-lib/libsec-ril.so:vendor/lib/libsec-ril.so|6686590c3cf1a5caa1c9976f5c6bbcdffe588656
+# Radio - pinned to haxxed G870FXXU1BQE1_G870FOXX1BQE1_XEO
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|984a2c00e4e04d66be1d22f495422b53bcb4d214
