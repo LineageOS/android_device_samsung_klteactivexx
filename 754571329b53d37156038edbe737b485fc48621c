@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aab40161_5b5c1324",
+        "filename": "overlay/lineage-sdk/lineage/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-11-29T23:22:16Z",
+      "side": 1,
+      "message": "This is the default value.",
+      "range": {
+        "startLine": 24,
+        "startChar": 65,
+        "endLine": 24,
+        "endChar": 66
+      },
+      "revId": "754571329b53d37156038edbe737b485fc48621c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
