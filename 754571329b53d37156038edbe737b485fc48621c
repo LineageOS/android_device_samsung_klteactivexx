@@ -70,6 +70,30 @@
       "revId": "754571329b53d37156038edbe737b485fc48621c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c10c9a2_2906187f",
+        "filename": "overlay/lineage-sdk/lineage/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-11-29T23:33:22Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "93f2a458_ea986f73",
+      "range": {
+        "startLine": 24,
+        "startChar": 65,
+        "endLine": 24,
+        "endChar": 66
+      },
+      "revId": "754571329b53d37156038edbe737b485fc48621c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
