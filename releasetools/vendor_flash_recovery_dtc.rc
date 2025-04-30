@@ -1,0 +1,5 @@
+service vendor_flash_recovery /vendor/bin/recovery-transform.sh
+    class main
+    oneshot
+    disabled
+    override

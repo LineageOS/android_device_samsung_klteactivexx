@@ -1,15 +1,33 @@
+ifneq ($(filter klteactivexx,$(TARGET_DEVICE)),)
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := dtc.sh
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT)/etc
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_EXECUTABLES)
 LOCAL_SRC_FILES := dtc.sh
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := hack.bin
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT)/etc
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
 LOCAL_SRC_FILES := hack.bin
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := recovery-transform.sh
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_EXECUTABLES)
+LOCAL_SRC_FILES := dtc-recovery.sh
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := vendor_flash_recovery_dtc.rc
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
+LOCAL_SRC_FILES    := vendor_flash_recovery_dtc.rc
+include $(BUILD_PREBUILT)
+
+endif

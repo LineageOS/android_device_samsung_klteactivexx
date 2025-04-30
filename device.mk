@@ -30,7 +30,9 @@ $(call inherit-product, device/samsung/klte-common/nfc/pn547/product.mk)
 # Releasetools
 PRODUCT_PACKAGES += \
    dtc.sh \
-   hack.bin
+   hack.bin \
+   recovery-transform.sh \
+   vendor_flash_recovery_dtc.rc
 
 PRODUCT_COPY_FILES += \
     device/samsung/klteactivexx/releasetools/dtc.sh:install/bin/dtc.sh \
